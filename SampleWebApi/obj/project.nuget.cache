@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fP2LZ8jiGCM=",
+  "dgSpecHash": "HPlWHBVkhyU=",
   "success": true,
-  "projectFilePath": "/Users/alainkaiser/Documents/source/_temp/SampleWebApi/SampleWebApi/SampleWebApi.csproj",
+  "projectFilePath": "/Users/alainkaiser/Documents/source/alainkaiser/sample-net-core-api-vps/SampleWebApi/SampleWebApi.csproj",
   "expectedPackageFiles": [
     "/Users/alainkaiser/.nuget/packages/microsoft.aspnetcore.openapi/9.0.0/microsoft.aspnetcore.openapi.9.0.0.nupkg.sha512",
     "/Users/alainkaiser/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

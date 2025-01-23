@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/alainkaiser/Documents/source/_temp/SampleWebApi/SampleWebApi/SampleWebApi.csproj": {}
+    "/Users/alainkaiser/Documents/source/alainkaiser/sample-net-core-api-vps/SampleWebApi/SampleWebApi.csproj": {}
   },
   "projects": {
-    "/Users/alainkaiser/Documents/source/_temp/SampleWebApi/SampleWebApi/SampleWebApi.csproj": {
+    "/Users/alainkaiser/Documents/source/alainkaiser/sample-net-core-api-vps/SampleWebApi/SampleWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alainkaiser/Documents/source/_temp/SampleWebApi/SampleWebApi/SampleWebApi.csproj",
+        "projectUniqueName": "/Users/alainkaiser/Documents/source/alainkaiser/sample-net-core-api-vps/SampleWebApi/SampleWebApi.csproj",
         "projectName": "SampleWebApi",
-        "projectPath": "/Users/alainkaiser/Documents/source/_temp/SampleWebApi/SampleWebApi/SampleWebApi.csproj",
+        "projectPath": "/Users/alainkaiser/Documents/source/alainkaiser/sample-net-core-api-vps/SampleWebApi/SampleWebApi.csproj",
         "packagesPath": "/Users/alainkaiser/.nuget/packages/",
-        "outputPath": "/Users/alainkaiser/Documents/source/_temp/SampleWebApi/SampleWebApi/obj/",
+        "outputPath": "/Users/alainkaiser/Documents/source/alainkaiser/sample-net-core-api-vps/SampleWebApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/alainkaiser/.nuget/NuGet/NuGet.Config"
