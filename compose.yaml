@@ -1,0 +1,8 @@
+﻿services:
+  samplewebapi:
+    image: samplewebapi
+    build:
+      context: .
+      dockerfile: SampleWebApi/Dockerfile
+    ports:
+      - "2000:8080"
