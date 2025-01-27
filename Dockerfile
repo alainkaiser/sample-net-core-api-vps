@@ -1,9 +1,12 @@
 ﻿FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
-USER $APP_UID
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
+
+# Create cert directory and copy certificate
+RUN mkdir -p /app/certs
 COPY ./certs/selfsigned.pfx /app/certs/selfsigned.pfx
+RUN chmod 644 /app/certs/selfsigned.pfx
 
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release

@@ -7,7 +7,7 @@ builder.WebHost.ConfigureKestrel(options =>
 {
     options.ListenAnyIP(443, listenOptions =>
     {
-        listenOptions.UseHttps("/app/certs/selfsigned.pfx", "YourPassword"); 
+        listenOptions.UseHttps("/app/certs/selfsigned.pfx", "YourPassword");
     });
 });
 
