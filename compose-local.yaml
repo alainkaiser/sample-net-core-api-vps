@@ -1,0 +1,34 @@
+﻿version: '3.9'
+
+services:
+  samplewebapi:
+    image: samplewebapi
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_HTTPS_PORT=443
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/selfsigned.pem
+    ports:
+      - "80:80"    # HTTP (optional, für Weiterleitungen zu HTTPS)
+      - "443:443"  # HTTPS
+    volumes:
+      - /etc/selfsigned/selfsigned.pem:/https/selfsigned.pem:ro
+  
+  rabbitmq:
+    image: masstransit/rabbitmq:latest
+    container_name: rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    restart: always
+    ports:
+      - "15672:15672"  # Management UI
+      - "5672:5672"    # Messaging Port
+    healthcheck:
+      test: [ "CMD", "rabbitmq-diagnostics", "-q", "ping" ]
+      interval: 10s
+      timeout: 10s
+      retries: 5

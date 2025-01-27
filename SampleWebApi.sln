@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Dockerfile = Dockerfile
 		.dockerignore = .dockerignore
 		compose-prod.yaml = compose-prod.yaml
+		compose-local.yaml = compose-local.yaml
 	EndProjectSection
 EndProject
 Global
