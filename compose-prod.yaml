@@ -8,13 +8,13 @@ services:
       dockerfile: Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
-      - ASPNETCORE_URLS=https://+:443;http://+:80
-      - ASPNETCORE_HTTPS_PORT=443
+      - ASPNETCORE_URLS=https://+:8081;http://+:8080
+      - ASPNETCORE_HTTPS_PORT=8081
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/fullchain.pem
       - ASPNETCORE_Kestrel__Certificates__Default__KeyPath=/https/privkey.pem
     ports:
-      - "9000:80"  # HTTP
-      - "9001:443" # HTTPS
+      - "8080:8080"  # HTTP
+      - "8081:8081"  # HTTPS
     volumes:
       - /etc/letsencrypt/live/4135999-tb87762.hostman.dev/fullchain.pem:/https/fullchain.pem:ro
       - /etc/letsencrypt/live/4135999-tb87762.hostman.dev/privkey.pem:/https/privkey.pem:ro
