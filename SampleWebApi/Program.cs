@@ -2,6 +2,13 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Configure Kestrel to use HTTPS
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(443,
+        listenOptions => { listenOptions.UseHttps("/etc/ssl/certs/webapi.crt", "/etc/ssl/certs/webapi.key"); });
+});
+
 // Add services to the container.
 
 builder.Services.AddControllers();
