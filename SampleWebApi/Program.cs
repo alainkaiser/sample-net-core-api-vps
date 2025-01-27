@@ -2,14 +2,18 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Kestrel HTTPS-Konfiguration
-builder.WebHost.ConfigureKestrel(options =>
+if (builder.Environment.IsProduction())
 {
-    options.ListenAnyIP(443, listenOptions =>
+    builder.WebHost.ConfigureKestrel(options =>
     {
-        listenOptions.UseHttps("/app/certs/selfsigned.pfx", "YourPassword");
+        options.ListenAnyIP(443, listenOptions =>
+        {
+            listenOptions.UseHttps("/app/certs/selfsigned.pfx", "YourPassword");
+        });
     });
-});
+}
+
+// Rest bleibt gleich...
 
 // Add services to the container.
 builder.Services.AddControllers();
