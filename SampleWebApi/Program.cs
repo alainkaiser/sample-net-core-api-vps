@@ -5,10 +5,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Kestrel HTTPS-Konfiguration
 builder.WebHost.ConfigureKestrel(options =>
 {
-    options.ListenAnyIP(80); // HTTP
     options.ListenAnyIP(443, listenOptions =>
     {
-        listenOptions.UseHttps("/https/selfsigned.pem");
+        listenOptions.UseHttps("/https/selfsigned.pfx", "YourPassword"); 
     });
 });
 
